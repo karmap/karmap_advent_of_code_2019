@@ -24,9 +24,12 @@ def calc(input, noun, verb):
 #print(calc(input,12,2))
 
 #find 19690720
-for i in range(0,99):
-    for j in range(0,99):
-        input_copy = input.copy()
-        res = calc(input_copy, i, j)
-        if res == 19690720:
-            print(f'{i}{j}')
+def find_case(target):
+    for i in range(0,99):
+        for j in range(0,99):
+            input_copy = input.copy()
+            res = calc(input_copy, i, j)
+            if res == target:
+                return f'{i}{j}'
+
+print(find_case(19690720))
