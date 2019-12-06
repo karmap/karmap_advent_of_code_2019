@@ -26,8 +26,7 @@ def num_met_criteria(digits):
     for key, val in groups.items():
         if val == 2:
             return True
-    else:
-        return False
+    return False
 
 
 for num in range (range_start, range_end + 1):
